@@ -6,6 +6,8 @@
   "1": {
     "name": "genesis",
     "anchor": "genesis",
+    "shorten": "gen",
+    "others": ["ge", "gn"],
     "count": 50,
     "verses": {
       "1": 31,
@@ -63,6 +65,8 @@
   "2": {
     "name": "exodus",
     "anchor": "exodus",
+    "shorten": "ex",
+    "others": ["exod", "exo"],
     "count": 40,
     "verses": {
       "1": 22,
@@ -110,6 +114,8 @@
   "3": {
     "name": "leviticus",
     "anchor": "leviticus",
+    "shorten": "lev",
+    "others": ["le", "lv"],
     "count": 27,
     "verses": {
       "1": 17,
@@ -144,6 +150,8 @@
   "4": {
     "name": "numbers",
     "anchor": "numbers",
+    "shorten": "num",
+    "others": ["nu", "nm", "nb"],
     "count": 36,
     "verses": {
       "1": 54,
@@ -187,6 +195,8 @@
   "5": {
     "name": "deuteronomy",
     "anchor": "deuteronomy",
+    "shorten": "deut",
+    "others": ["de", "dt"],
     "count": 34,
     "verses": {
       "1": 46,
@@ -228,6 +238,8 @@
   "6": {
     "name": "joshua",
     "anchor": "joshua",
+    "shorten": "josh",
+    "others": ["jos", "jsh"],
     "count": 24,
     "verses": {
       "1": 18,
@@ -259,6 +271,8 @@
   "7": {
     "name": "judges",
     "anchor": "judges",
+    "shorten": "judg",
+    "others": ["jdg", "jg", "jdgs"],
     "count": 21,
     "verses": {
       "1": 36,
@@ -286,6 +300,8 @@
   },
   "8": {
     "name": "ruth",
+    "shorten": "ruth",
+    "others": ["rth", "ru"],
     "anchor": "ruth",
     "count": 4,
     "verses": {
@@ -298,6 +314,8 @@
   "9": {
     "name": "1 samuel",
     "anchor": "1samuel",
+    "shorten": "1 sam",
+    "others": ["1 sm", "1 sa", "1 s", "1 sam", "1sa", "1s"],
     "count": 31,
     "verses": {
       "1": 28,
@@ -336,6 +354,8 @@
   "10": {
     "name": "2 samuel",
     "anchor": "2samuel",
+    "shorten": "2 Sam",
+    "others": ["2 sm", "2 sa", "2 s", "2sam", "2sa", "2s"],
     "count": 24,
     "verses": {
       "1": 27,
@@ -367,6 +387,8 @@
   "11": {
     "name": "1 kings",
     "anchor": "1kings",
+    "shorten": "1 kgs",
+    "others": ["1 ki", "1kgs", "1kin", "1ki", "1k"],
     "count": 22,
     "verses": {
       "1": 53,
@@ -396,6 +418,8 @@
   "12": {
     "name": "2 kings",
     "anchor": "2kings",
+    "shorten": "2 kgs",
+    "others": ["2ki", "2kgs", "2kin", "2ki", "2k"],
     "count": 25,
     "verses": {
       "1": 18,
@@ -428,6 +452,8 @@
   "13": {
     "name": "1 chronicles",
     "anchor": "1chronicles",
+    "shorten": "1 chron",
+    "others": ["1 chr", "1 ch", "1chron", "1chr", "1ch"],
     "count": 29,
     "verses": {
       "1": 54,
@@ -464,6 +490,8 @@
   "14": {
     "name": "2 chronicles",
     "anchor": "2chronicles",
+    "shorten": "2 chron",
+    "others": ["2 chr", "2 ch", "2chron", "2chr", "2ch"],
     "count": 36,
     "verses": {
       "1": 17,
@@ -507,6 +535,8 @@
   "15": {
     "name": "ezra",
     "anchor": "ezra",
+    "shorten": "ezr",
+    "others": ["ez"],
     "count": 10,
     "verses": {
       "1": 11,
@@ -524,6 +554,8 @@
   "16": {
     "name": "nehemiah",
     "anchor": "nehemiah",
+    "shorten": "neh",
+    "others": ["ne"],
     "count": 13,
     "verses": {
       "1": 11,
@@ -544,6 +576,8 @@
   "17": {
     "name": "esther",
     "anchor": "esther",
+    "shorten": "est",
+    "others": ["esth","es"],
     "count": 10,
     "verses": {
       "1": 22,
@@ -561,6 +595,7 @@
   "18": {
     "name": "job",
     "anchor": "job",
+    "shorten": "jb",
     "count": 42,
     "verses": {
       "1": 22,
@@ -610,6 +645,8 @@
   "19": {
     "name": "psalm",
     "anchor": "psalm",
+    "shorten": "ps",
+    "others": ["pslm","psa", "psm", "pss"],
     "count": 150,
     "verses": {
       "1": 6,
@@ -767,6 +804,8 @@
   "20": {
     "name": "proverbs",
     "anchor": "proverbs",
+    "shorten": "prov",
+    "others": ["pro","prv","pr"],
     "count": 31,
     "verses": {
       "1": 33,
@@ -805,6 +844,8 @@
   "21": {
     "name": "ecclesiastes",
     "anchor": "ecclesiastes",
+    "shorten": "eccles",
+    "others": ["eccle","ecc","ec"],
     "count": 12,
     "verses": {
       "1": 18,
@@ -824,6 +865,8 @@
   "22": {
     "name": "song of songs",
     "anchor": "song of songs",
+    "shorten": "song",
+    "others": ["sos","so"],
     "count": 8,
     "verses": {
       "1": 17,
@@ -839,6 +882,8 @@
   "23": {
     "name": "isaiah",
     "anchor": "isaiah",
+    "shorten": "isa",
+    "others": ["is"],
     "count": 66,
     "verses": {
       "1": 31,
@@ -912,6 +957,8 @@
   "24": {
     "name": "jeremiah",
     "anchor": "jeremiah",
+    "shorten": "jer",
+    "others": ["je","jr"],
     "count": 52,
     "verses": {
       "1": 19,
@@ -971,6 +1018,8 @@
   "25": {
     "name": "lamentations",
     "anchor": "lamentations",
+    "shorten": "lam",
+    "others": ["la"],
     "count": 5,
     "verses": {
       "1": 22,
@@ -983,6 +1032,8 @@
   "26": {
     "name": "ezekiel",
     "anchor": "ezekiel",
+    "shorten": "ezek",
+    "others": ["eze","ezk"],
     "count": 48,
     "verses": {
       "1": 28,
@@ -1038,6 +1089,8 @@
   "27": {
     "name": "daniel",
     "anchor": "daniel",
+    "shorten": "dan",
+    "others": ["da","dn"],
     "count": 12,
     "verses": {
       "1": 21,
@@ -1057,6 +1110,8 @@
   "28": {
     "name": "hosea",
     "anchor": "hosea",
+    "shorten": "hos",
+    "others": ["ho"],
     "count": 14,
     "verses": {
       "1": 11,
@@ -1078,6 +1133,7 @@
   "29": {
     "name": "joel",
     "anchor": "joel",
+    "shorten": "jl",
     "count": 3,
     "verses": {
       "1": 20,
@@ -1088,6 +1144,7 @@
   "30": {
     "name": "amos",
     "anchor": "amos",
+    "shorten": "am",
     "count": 9,
     "verses": {
       "1": 15,
@@ -1104,6 +1161,7 @@
   "31": {
     "name": "obadiah",
     "anchor": "obadiah",
+    "shorten": "ob",
     "count": 1,
     "verses": {
       "1": 21
@@ -1112,6 +1170,8 @@
   "32": {
     "name": "jonah",
     "anchor": "jonah",
+    "shorten": "jon",
+    "others": ["jnh"],
     "count": 4,
     "verses": {
       "1": 17,
@@ -1123,6 +1183,8 @@
   "33": {
     "name": "micah",
     "anchor": "micah",
+    "shorten": "mic",
+    "others": ["mc"],
     "count": 7,
     "verses": {
       "1": 16,
@@ -1137,6 +1199,8 @@
   "34": {
     "name": "nahum",
     "anchor": "nahum",
+    "shorten": "nah",
+    "others": ["na"],
     "count": 3,
     "verses": {
       "1": 15,
@@ -1147,6 +1211,8 @@
   "35": {
     "name": "habakkuk",
     "anchor": "habakkuk",
+    "shorten": "hab",
+    "others": ["hb"],
     "count": 3,
     "verses": {
       "1": 17,
@@ -1157,6 +1223,8 @@
   "36": {
     "name": "zephaniah",
     "anchor": "zephaniah",
+    "shorten": "zeph",
+    "others": ["zep", "zp"],
     "count": 3,
     "verses": {
       "1": 18,
@@ -1167,6 +1235,8 @@
   "37": {
     "name": "haggai",
     "anchor": "haggai",
+    "shorten": "hag",
+    "others": ["hg"],
     "count": 2,
     "verses": {
       "1": 15,
@@ -1176,6 +1246,8 @@
   "38": {
     "name": "zechariah",
     "anchor": "zechariah",
+    "shorten": "zech",
+    "others": ["zec", "zc"],
     "count": 14,
     "verses": {
       "1": 21,
@@ -1197,6 +1269,8 @@
   "39": {
     "name": "malachi",
     "anchor": "malachi",
+    "shorten": "mal",
+    "others": ["ml"],
     "count": 4,
     "verses": {
       "1": 14,
@@ -1208,6 +1282,8 @@
   "40": {
     "name": "matthew",
     "anchor": "matthew",
+    "shorten": "matt",
+    "others": ["mt"],
     "count": 28,
     "verses": {
       "1": 25,
@@ -1243,6 +1319,8 @@
   "41": {
     "name": "mark",
     "anchor": "mark",
+    "shorten": "mrk",
+    "others": ["mar", "mk", "mr"],
     "count": 16,
     "verses": {
       "1": 45,
@@ -1266,6 +1344,8 @@
   "42": {
     "name": "luke",
     "anchor": "luke",
+    "shorten": "luk",
+    "others": ["lk"],
     "count": 24,
     "verses": {
       "1": 80,
@@ -1297,6 +1377,8 @@
   "43": {
     "name": "john",
     "anchor": "john",
+    "shorten": "jn",
+    "others": ["joh", "jhn"],
     "count": 21,
     "verses": {
       "1": 51,
@@ -1325,6 +1407,8 @@
   "44": {
     "name": "acts",
     "anchor": "acts",
+    "shorten": "act",
+    "others": ["ac"],
     "count": 28,
     "verses": {
       "1": 26,
@@ -1360,6 +1444,8 @@
   "45": {
     "name": "romans",
     "anchor": "romans",
+    "shorten": "rom",
+    "others": ["ro", "rm"],
     "count": 16,
     "verses": {
       "1": 32,
@@ -1383,6 +1469,8 @@
   "46": {
     "name": "1 corinthians",
     "anchor": "1corinthians",
+    "shorten": "1 cor",
+    "others": ["1 co", "1cor", "1co"],
     "count": 16,
     "verses": {
       "1": 31,
@@ -1406,6 +1494,8 @@
   "47": {
     "name": "2 corinthians",
     "anchor": "2corinthians",
+    "shorten": "2 cor",
+    "others": ["2 co", "2cor", "2co"],
     "count": 13,
     "verses": {
       "1": 24,
@@ -1426,6 +1516,8 @@
   "48": {
     "name": "galatians",
     "anchor": "galatians",
+    "shorten": "gal",
+    "others": ["ga"],
     "count": 6,
     "verses": {
       "1": 24,
@@ -1439,6 +1531,8 @@
   "49": {
     "name": "ephesians",
     "anchor": "ephesians",
+    "shorten": "eph",
+    "others": ["ephes"],
     "count": 6,
     "verses": {
       "1": 23,
@@ -1452,6 +1546,8 @@
   "50": {
     "name": "philippians",
     "anchor": "philippians",
+    "shorten": "phil",
+    "others": ["php", "pp"],
     "count": 4,
     "verses": {
       "1": 30,
@@ -1463,6 +1559,8 @@
   "51": {
     "name": "colossians",
     "anchor": "colossians",
+    "shorten": "col",
+    "others": ["co"],
     "count": 4,
     "verses": {
       "1": 29,
@@ -1474,6 +1572,8 @@
   "52": {
     "name": "1 thessalonians",
     "anchor": "1thessalonians",
+    "shorten": "1 thess",
+    "others": ["1 thes", "1 th", "1thes", "1th","1thess"],
     "count": 5,
     "verses": {
       "1": 10,
@@ -1486,6 +1586,8 @@
   "53": {
     "name": "2 thessalonians",
     "anchor": "2thessalonians",
+    "shorten": "2 thess",
+    "others": ["2 thes", "2 th", "2thes", "2th","2thess"],
     "count": 3,
     "verses": {
       "1": 12,
@@ -1496,6 +1598,8 @@
   "54": {
     "name": "1 timothy",
     "anchor": "1timothy",
+    "shorten": "1 tim",
+    "others": ["1 ti", "1tim", "1ti"],
     "count": 6,
     "verses": {
       "1": 20,
@@ -1509,6 +1613,8 @@
   "55": {
     "name": "2 timothy",
     "anchor": "2timothy",
+    "shorten": "2 tim",
+    "others": ["2 ti", "2tim", "2ti"],
     "count": 4,
     "verses": {
       "1": 18,
@@ -1520,6 +1626,8 @@
   "56": {
     "name": "titus",
     "anchor": "titus",
+    "shorten": "tit",
+    "others": ["ti"],
     "count": 3,
     "verses": {
       "1": 16,
@@ -1530,6 +1638,8 @@
   "57": {
     "name": "philemon",
     "anchor": "philemon",
+    "shorten": "phm",
+    "others": ["pm"],
     "count": 1,
     "verses": {
       "1": 25
@@ -1538,6 +1648,7 @@
   "58": {
     "name": "hebrews",
     "anchor": "hebrews",
+    "shorten": "heb",
     "count": 13,
     "verses": {
       "1": 14,
@@ -1558,6 +1669,8 @@
   "59": {
     "name": "james",
     "anchor": "james",
+    "shorten": "jas",
+    "others": ["jm"],
     "count": 5,
     "verses": {
       "1": 27,
@@ -1570,6 +1683,8 @@
   "60": {
     "name": "1 peter",
     "anchor": "1peter",
+    "shorten": "1 pet",
+    "others": ["1 pe", "1 pt", "1 p","1pet", "1pe", "1pt", "1p"],
     "count": 5,
     "verses": {
       "1": 25,
@@ -1582,6 +1697,8 @@
   "61": {
     "name": "2 peter",
     "anchor": "2peter",
+    "shorten": "2 pet",
+    "others": ["2 pe", "2 pt", "2 p","2pet", "2pe", "2pt", "2p"],
     "count": 3,
     "verses": {
       "1": 21,
@@ -1592,6 +1709,8 @@
   "62": {
     "name": "1 john",
     "anchor": "1john",
+    "shorten": "1 jn",
+    "others": ["1 jhn", "1 j","1 jo", "1jhn","1j", "1jo"],
     "count": 5,
     "verses": {
       "1": 10,
@@ -1604,6 +1723,8 @@
   "63": {
     "name": "2 john",
     "anchor": "2john",
+    "shorten": "2 jn",
+    "others": ["2 jhn", "2 j","2 jo", "2jhn","2j", "2jo"],    
     "count": 1,
     "verses": {
       "1": 13
@@ -1612,6 +1733,8 @@
   "64": {
     "name": "3 john",
     "anchor": "3john",
+    "shorten": "3 jn",
+    "others": ["3 jhn", "3 j","3 jo", "3jhn","3j", "3jo"],
     "count": 1,
     "verses": {
       "1": 15
@@ -1620,6 +1743,8 @@
   "65": {
     "name": "jude",
     "anchor": "jude",
+    "shorten": "jud",
+    "others": ["jd"],
     "count": 1,
     "verses": {
       "1": 25
@@ -1628,6 +1753,8 @@
   "66": {
     "name": "revelation",
     "anchor": "revelation",
+    "shorten": "rev",
+    "others": ["re"],
     "count": 22,
     "verses": {
       "1": 20,
