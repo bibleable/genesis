@@ -1,10 +1,8 @@
-{
+<script onload>
+  var bible = {
   "0": {
     "name": "holy bible",
-    "book_count": 66,
-    "total_verses": 31106,
-    "ot_verses": 23146,
-    "nt_verses": 7960
+    "book-count": 66
   },
   "1": {
     "name": "genesis",
@@ -1658,3 +1656,36 @@
     }
   }
 }
+
+// console.log(bible)
+// console.log(bible[1]["count"])
+var total = 0
+
+//loop every book
+for (let book = 1; book < 40; book++) {
+  // loop through and calculate all the verses
+  for (let index = 0; index < bible[book]["count"]; index++) {
+    total = total + bible[book]["verses"][index+1]
+  }
+  // console.log(total)
+}
+
+console.log(total)
+//23146
+
+for (let book = 40; book < 67; book++) {
+  // loop through and calculate all the verses
+  for (let index = 0; index < bible[book]["count"]; index++) {
+    total = total + bible[book]["verses"][index+1]
+  }
+  // console.log(total)
+}
+
+console.log(total)
+// new testament
+//7960
+
+// 31106 verses
+
+</script>
+

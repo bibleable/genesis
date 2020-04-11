@@ -1,10 +1,8 @@
-{
+<script onload>
+  var bible = {
   "0": {
     "name": "holy bible",
-    "book_count": 66,
-    "total_verses": 31106,
-    "ot_verses": 23146,
-    "nt_verses": 7960
+    "bookcount": 66
   },
   "1": {
     "name": "genesis",
@@ -1658,3 +1656,16 @@
     }
   }
 }
+
+//loop every book
+for (let book = 1; book < 67; book++) {
+  var total = 0
+  // loop through and calculate all the verses
+  for (let index = 0; index < bible[book]["count"]; index++) {
+    total = total + bible[book]["verses"][index+1]
+  }
+  console.log(bible[book]["name"] + "->" + total)
+}
+
+</script>
+
