@@ -1,0 +1,157 @@
+{
+  "0": {
+    "name": "holy bible",
+    "type": "chronological",
+    "period": 365
+  },
+  "1": {
+    "name": "genesis",
+    "start_verse": 1,
+    "end_verse": 3
+  },
+  "2": {
+    "name": "genesis",
+    "start_verse": 4,
+    "end_verse": 7
+  },
+  "3": {
+    "name": "genesis",
+    "start_verse": 8,
+    "end_verse": 11
+  },
+  "4": {
+    "name": "job",
+    "start_verse": 1,
+    "end_verse": 5
+  },
+  "5": {
+    "name": "job",
+    "start_verse": 6,
+    "end_verse": 9
+  },
+  "6": {
+    "name": "job",
+    "start_verse": 10,
+    "end_verse": 13
+  },
+  "7": {
+    "name": "job",
+    "start_verse": 14,
+    "end_verse": 16
+  },
+  "8": {
+    "name": "job",
+    "start_verse": 17,
+    "end_verse": 20
+  },
+  "9": {
+    "name": "job",
+    "start_verse": 21,
+    "end_verse": 23
+  },
+  "10": {
+    "name": "job",
+    "start_verse": 24,
+    "end_verse": 28
+  },
+  "11": {
+    "name": "job",
+    "start_verse": 29,
+    "end_verse": 31
+  },
+  "12": {
+    "name": "job",
+    "start_verse": 32,
+    "end_verse": 34
+  },
+  "13": {
+    "name": "job",
+    "start_verse": 35,
+    "end_verse": 37
+  },
+  "14": {
+    "name": "job",
+    "start_verse": 38,
+    "end_verse": 39
+  },
+  "15": {
+    "name": "job",
+    "start_verse": 40,
+    "end_verse": 42
+  },
+  "16": {
+    "name": "genesis",
+    "start_verse": 12,
+    "end_verse": 15
+  },
+  "17": {
+    "name": "genesis",
+    "start_verse": 16,
+    "end_verse": 18
+  },
+  "18": {
+    "name": "genesis",
+    "start_verse": 19,
+    "end_verse": 21
+  },
+  "19": {
+    "name": "genesis",
+    "start_verse": 22,
+    "end_verse": 24
+  },
+  "20": {
+    "name": "genesis",
+    "start_verse": 25,
+    "end_verse": 26
+  },
+  "21": {
+    "name": "genesis",
+    "start_verse": 27,
+    "end_verse": 29
+  },
+  "22": {
+    "name": "genesis",
+    "start_verse": 30,
+    "end_verse": 31
+  },
+  "23": {
+    "name": "genesis",
+    "start_verse": 32,
+    "end_verse": 34
+  },
+  "24": {
+    "name": "genesis",
+    "start_verse": 35,
+    "end_verse": 37
+  },
+  "25": {
+    "name": "genesis",
+    "start_verse": 38,
+    "end_verse": 40
+  },
+  "26": {
+    "name": "genesis",
+    "start_verse": 41,
+    "end_verse": 42
+  },
+  "27": {
+    "name": "genesis",
+    "start_verse": 43,
+    "end_verse": 45
+  },
+  "28": {
+    "name": "genesis",
+    "start_verse": 46,
+    "end_verse": 47
+  },
+  "29": {
+    "name": "genesis",
+    "start_verse": 48,
+    "end_verse": 50
+  },
+  "30": {
+    "name": "exodus",
+    "start_verse": 1,
+    "end_verse": 3
+  }
+}
