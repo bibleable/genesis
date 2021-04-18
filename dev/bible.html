@@ -20,6 +20,7 @@
       padding: 20px;
       transition: all 0.2s;
     }
+
     h2 {
       font-weight: bold;
       margin-bottom: 15px;
@@ -31,6 +32,13 @@
     }
     
     #recipe-container {
+      border: 1px solid black;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #result-container {
+      border: 1px solid black;
       display: flex;
       flex-wrap: wrap;
     }
@@ -50,7 +58,6 @@
       font-size: 18px;
       font-weight: 600;
     }
-    
     
     .ingredient-title {
       font-size: 16px;
@@ -78,17 +85,16 @@
       border: none;
       height: 100%;
       width: 50px;
-     
     }
   
     .sort-button:hover {
-        background-color: rgba(0,0,0, 0.2);
-        cursor: pointer;
-      } 
+      background-color: rgba(0,0,0, 0.2);
+      cursor: pointer;
+    } 
      
-      #sort-label {
-        font-size: 12px;
-      }
+    #sort-label {
+      font-size: 12px;
+    }
     
     #ascending-icon {
       height: 100%;
@@ -100,14 +106,14 @@
       border: none;
     }
       
-      #cooking-time-input {
-        width: 30px;
-        margin-right: 10px;
-      }
-    
-      #search-input {
-        margin-right: 10px;
-      }
+    #cooking-time-input {
+      width: 30px;
+      margin-right: 10px;
+    }
+  
+    #search-input {
+      margin-right: 10px;
+    }
   </style>
 </head>
 <body>
@@ -117,8 +123,14 @@
     <strike><li>Change the Search algorithm. It should be based on include similarity result. E.g ge should only show genesis instead of judges too. can include other suggestion</li></strike>
     <strike><li>Typing phill should give you philemon and not empty result</li></strike>
     <strike><li>Search re should return "revelation" as first result instead of hebrews or jreremiah</li></strike>
-    <li>Typing `king 2:8` should give you a `1 kings 2:8` and include i think you meant .....</li>
+    <li>Typing `king 2:8` should give you a `1 kings 2:8` and `2 kings 2:8` and include i think you meant .....</li>
     <li>Similiarly typing `act 1:8` should give you acts 1:8</li>
+
+    <li>Typing king 2:8 should give you the verse on king 2:8</li>
+    <li>Typing king 2:8-16 should give you the nine verses.</li>
+    <li>Typing king 2 should give you 1 king 2 the entire chapter</li>
+    <li>Each chapter should work properly and connect with the rtwbible</li>
+
   </ul>
 
     <div id="app">
@@ -139,35 +151,53 @@
 
         <input type="number" v-model="maxCookingTime" 
         id="cooking-time-input"></input>
+ 
         <input type="text" 
         v-model="searchValue" 
         placeholder="Search Recipe" id="search-input"></input>
+ 
         <i class="fa fa-search"></i>
       </div>
       
       <!-- Where the array of recipes get rendered as cards -->
-      <div id="recipe-container">
-        <div class="card" v-for="recipe in filteredVerses" :key="recipe.title">
-          <span v-if="recipe.type == 'ot'">
-            OLD TESTAMENT
-          </span>
-
-          <img :src="recipe.img" class="recipe-image"></img>
-            <div class="content">
-              <h1 class="recipe-title">
-                  {{ recipe.title }}
-              </h1>
-
-              <span v-for="(chapter, index) in recipe.count">
-                  <a class="btn btn-sm btn-outline-primary" 
-                    :href="'http://rtwbible.com/searches?q='+recipe.title+'&num='+ (index + 1) +'&next='+ recipe.title + '&nnum=4&previous=' +recipe.title+'&pnum=2'">
-                    {{index + 1}}
-                  </a>
-                </span>
+      <div class="row">
+        
+        <div class="col">
+          <div id="recipe-container">
+            <div class="card" v-for="recipe in filteredVerses" :key="recipe.title">
+              <span v-if="recipe.type == 'ot'">
+                OLD TESTAMENT
+              </span>
+    
+              <img :src="recipe.img" class="recipe-image"></img>
+                <div class="content">
+                  <h1 class="recipe-title">
+                      {{ recipe.title }}
+                  </h1>
+    
+                  <span v-for="(chapter, index) in recipe.count">
+                      <a class="btn btn-sm btn-outline-primary" 
+                        :href="'http://rtwbible.com/searches?q='+recipe.title+'&num='+ (index + 1) +'&next='+ recipe.title + '&nnum=4&previous=' +recipe.title+'&pnum=2'">
+                        {{index + 1}}
+                      </a>
+                    </span>
+                </div>
+    
             </div>
+          </div>
+        </div>
 
+        <div class="col">
+          <div id="result-container">
+            <div class="result">
+              <p v-html="result"></p>
+            </div>
+            <!-- <div class="card" v-for="recipe in results" :key="result.title">
+            </div> -->
+          </div>
         </div>
       </div>
+
     </div>
 
   <script>
@@ -178,6 +208,7 @@
         sortBy: 'alphabetically',
         searchValue: '',
         maxCookingTime: null,
+        result: "",
         recipes: [
             {title: 'genesis', count: 50, type:"ot", description: 'Yummy pizza for those lazy days', ingredients: ['Dough', 'Tomato Paste', 'Cheese', 'Bell Pepper', 'Onion'], cookingTime: 60, img: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'},
             {title: 'exodus', count: 40, type:"ot", description: 'Yummy pizza for those lazy days', ingredients: ['Dough', 'Tomato Paste', 'Cheese', 'Bell Pepper', 'Onion'], cookingTime: 60, img: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'},
@@ -300,24 +331,113 @@
                   tempRecipes.reverse()
               }
 
-
               //sort based on similarity first
               tempRecipes = tempRecipes.sort((a,b) => {
                 //use LevenshteinDistance algorithmn to sort according 
                 // to similarity see levenshtein.js
-                answer = LevenshteinDistance(a.title,this.searchValue)
-                console.log(answer-1000)
-
+                answer = LevenshteinDistance(a.title, this.searchValue)
+                console.log(a.title + (answer-1000))
                 return answer-1000
               })
+
+              let chapter2chapter = /([Aa-zZ]+)\s*([0-9]*)[-]*([0-9]+)/g;
+              let verse2verse = /([Aa-zZ]+)\s*([0-9]*)[:]+([0-9]+)*[-]*([0-9]+)*/g;
+
+              // account for different chapter & different verses
+              // let verse2verse = /([Aa-zZ]+)\s*([0-9]*)[:]+([0-9]+)*[-]*([0-9]+)*/g;
+             
+              if(this.searchValue.match(verse2verse)) {
+                console.log("it matches🤗 verse2verse")
+                tokens = verse2verse.exec(this.searchValue)
+                console.log(tokens)
+                console.log("first token: " + tokens[0])
+                console.log("second token: " + tokens[1])
+                console.log("third token: " + tokens[2])
+                console.log("fourth token: " + tokens[1] + " " + tokens[2] + " " + tokens[3])
+                console.log("everything in between")
+                console.log("fifth token: " + tokens[1] + " " + tokens[2] + " " + tokens[4])
+
+                if(tokens[4] == undefined){
+                  this.result = "<h2>"+tokens[1] + " " + tokens[2] + ":" + tokens[3] + "</h2>"
+                } else {
+                  this.result = "<h2>"+tokens[1] + " " + tokens[2] + " " + tokens[3] + "->" + tokens[1] + " "+ tokens[2] + " "+  tokens[4] + "</h2>"
+                  this.result += "<br>" + ("first token: " + tokens[0])
+                  this.result += "<br>" + ("second token: " + tokens[1])
+                  this.result += "<br>" + ("third token: " + tokens[2])
+                  this.result += "<br>" + ("fourth token: " + tokens[1] + " " + tokens[2] + " " + tokens[3])
+                  this.result += "<br>" + ("everything in between")
+                  this.result += "<br>" + ("fifth token: " + tokens[1] + " " + tokens[2] + " " + tokens[4])
+                }
+
+
+
+              } 
+              else if(this.searchValue.match(chapter2chapter)) {
+
+                //this involves just chapters to chapters
+                console.log("it matches🤗 chapter2chapter")
+                tokens = chapter2chapter.exec(this.searchValue)
+                console.log(tokens)
+                if(tokens[2] == ""){ // Just a single chapter
+                  this.result = "<h1>i'm just going to show " + tokens[1] + tokens[3] + "</h1>"
+                }
+                else { // a few chapters
+                  console.log("first token: " + tokens[0])
+                  console.log("second token: " + tokens[1])
+                  console.log("third token: " + tokens[1] + " " + tokens[2])
+                  console.log("everything in between")
+                  console.log("fourth token: " + tokens[1] + " " + tokens[3])
+                  this.result = "<h2>it matches chapter 2 chapter</h2>"
+                  this.result += "<br>" + ("first token: " + tokens[0])
+                  this.result += "<br>" + ("second token: " + tokens[1])
+                  this.result += "<br>" + ("third token: " + tokens[1] + " " + tokens[2])
+                  this.result += "<br>" + ("everything in between")
+                  this.result += "<br>" + ("fourth token: " + tokens[1] + " " + tokens[3])
+                }
+              
+
+              } 
+              else {
+                console.log("it DOES NOT matches❌")
+              }
               
               if(tempRecipes.length == 0){
+                answer = this.searchValue.split(" ")
+                if(answer.length == 2){
+                  // console.log(answer[1])
+                  further = answer[1].split(":")
+                  // console.log(further[0])
+                  // console.log(further[1])
+                  value = parseInt(answer[1])
+                  // console.log("value is |" + answer[1] + "|")
+                  // console.log("*value is " + value)
+
+                  if(value != undefined && isNaN(value) == false){
+                    console.log("detected the space")
+                    console.log("value is " + value)
+                  }
+                } else if(answer.length == 1){
+                  console.log(this.searchValue[this.searchValue.length-1])
+                }
+
+                // if the last character is space
+                // i check if there is a result from the result
+                tempRecipes = this.lastNonZeroResult.filter((item) => {
+                  if(item.title == this.searchValue.trim()){
+                    return item
+                  }
+                })
+
+                if(tempRecipes.length != 0){
+                  return tempRecipes
+                }
+
                 return this.lastNonZeroResult
-                console.log("this is zero")
               }
 
+              //search within the last few results
               this.lastNonZeroResult = tempRecipes
-
+              this.result = ""
               //record the result to a value
               return tempRecipes
         }
